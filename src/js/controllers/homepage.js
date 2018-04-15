@@ -10,6 +10,7 @@ module.exports = View.extend({
     initialize: function() {
 
         this.setupBaseComponents();
+        this.initGallery();
 
     },
 
@@ -39,6 +40,15 @@ module.exports = View.extend({
             new LoginModal();
 
         });
+
+    },
+
+    initGallery: function() {
+
+        require('simple-lightbox');
+
+        var gallery = $('.galleryModule .js-open-modal');
+        gallery.simpleLightbox();
 
     }
 
