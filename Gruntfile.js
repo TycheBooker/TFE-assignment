@@ -27,6 +27,17 @@ module.exports = function(grunt) {
             }
         },
 
+        imagemin: {
+            jpgs: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= settings.srcPath %>images',
+                    src: ['**/*.jpg'],
+                    dest: '<%= settings.distPath %>images'
+                }]
+            }
+        },
+
         sync: {
             iconFont: {
                 files: [{
@@ -57,7 +68,8 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporterOutput: ''
             },
             files: {
                 src: ['<%= settings.srcPath %>js/**/*.js', 'Gruntfile.js']
@@ -105,7 +117,9 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
 
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'jscs', 'sass', 'includereplace', 'sync']);
+    grunt.registerTask('build', ['jshint', 'jscs', 'sass', 'imagemin', 'includereplace', 'sync']);
 
 };

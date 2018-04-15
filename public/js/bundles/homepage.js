@@ -144,7 +144,7 @@
 
 	        __webpack_require__.e/* nsure */(1, function() {
 
-	            var LoginModal = __webpack_require__(9);
+	            var LoginModal = __webpack_require__(10);
 	            new LoginModal();
 
 	        });
@@ -153,7 +153,7 @@
 
 	    initGallery: function() {
 
-	        __webpack_require__(10);
+	        __webpack_require__(9);
 
 	        var gallery = $('.galleryModule .js-open-modal');
 	        gallery.simpleLightbox();
@@ -11796,8 +11796,7 @@
 
 
 /***/ }),
-/* 9 */,
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(factory) {
