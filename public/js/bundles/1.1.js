@@ -11,11 +11,16 @@ webpackJsonp([1],{
 	module.exports = View.extend({
 
 	    initialize: function(options) {
-
-	        $.simpleLightbox.open({
-	            content: $('.loginModal').clone(),
-	            elementClass: 'slbContentEl'
+	        $.ajax({
+	            url:'login-modal.html',
+	            success: function(data) {
+	                $.simpleLightbox.open({
+	                    content: data,
+	                    elementClass: 'slbContentEl'
+	                });
+	            }
 	        });
+
 
 	    }
 
