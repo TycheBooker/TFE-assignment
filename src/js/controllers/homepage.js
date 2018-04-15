@@ -1,7 +1,6 @@
 var $ = require('jquery');
 var View = require('jquery-simple-view');
 var MainNav = require('js/components/mainNav');
-var MainSearch = require('js/components/mainSearch');
 
 module.exports = View.extend({
 
@@ -10,7 +9,6 @@ module.exports = View.extend({
     initialize: function() {
 
         this.setupBaseComponents();
-        this.initGallery();
 
     },
 
@@ -20,15 +18,36 @@ module.exports = View.extend({
             e.preventDefault();
             this.showLoginModal();
 
+        },
+
+        'input .mainSearch': function() {
+
+            console.log('input');
+            this.initMainSearch();
+
+        },
+
+        'click .galleryModule .js-open-modal': function(e) {
+            e.preventDefault();
+            this.showImageModal(e);
+
         }
     },
 
     setupBaseComponents: function() {
 
         this.mainNav = this.addView(new MainNav({$el: $('.mainNav')}));
-        this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
 
         return this;
+
+    },
+
+    initMainSearch: function() {
+
+        require.ensure([], function() {
+            var MainSearch = require('js/components/mainSearch');
+            this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
+        });
 
     },
 
@@ -43,12 +62,16 @@ module.exports = View.extend({
 
     },
 
-    initGallery: function() {
+    showImageModal: function(e) {
 
-        require('simple-lightbox');
+        var $gallery = $('.galleryModule .js-open-modal');
 
-        var gallery = $('.galleryModule .js-open-modal');
-        gallery.simpleLightbox();
+        require.ensure([], function() {
+
+            var ImageModal = require('js/components/imageModal');
+            new ImageModal(e, $gallery);
+
+        });
 
     }
 

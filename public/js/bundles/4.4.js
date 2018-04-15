@@ -1,4 +1,32 @@
-webpackJsonp([2],{
+webpackJsonp([4],{
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+	var View = __webpack_require__(3);
+
+	__webpack_require__(10);
+
+	module.exports = View.extend({
+
+	    initialize: function(options) {
+	        $.ajax({
+	            url:'login-modal.html',
+	            success: function(data) {
+	                $.simpleLightbox.open({
+	                    content: data,
+	                    elementClass: 'slbContentEl'
+	                });
+	            }
+	        });
+
+	    }
+
+	});
+
+
+/***/ }),
 
 /***/ 10:
 /***/ (function(module, exports, __webpack_require__) {
@@ -397,31 +425,6 @@ webpackJsonp([2],{
 	    return $;
 
 	}));
-
-
-/***/ }),
-
-/***/ 11:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(2);
-	var View = __webpack_require__(3);
-
-	__webpack_require__(10);
-
-	module.exports = View.extend({
-
-	    initialize: function(e, $gallery) {
-
-	        $.simpleLightbox.open({
-	            $items: $gallery,
-	            startAt: $gallery.index($(e.currentTarget)),
-	            bindToItems: false
-	        });
-
-	    }
-
-	});
 
 
 /***/ })
