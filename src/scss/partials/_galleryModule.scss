@@ -1,0 +1,37 @@
+.galleryModule {
+
+    $imageSize: 80;
+
+    background-color: #fff; padding: 1em 2em;
+    border-bottom: 2px solid $colorGrayLight1;
+    position: relative;
+
+    > ul {
+
+        padding: 2em 0; margin: 0 -0.5em;
+
+        > li {
+
+            margin-bottom: 1em; border-bottom: 1px solid $colorGrayLight1;
+            float: left; width: 33%; box-sizing: border-box; padding: 0.5em;
+            margin: 0; border: 0;
+
+        }
+    }
+
+    @include mediaMinWidth($breakpointMedium) {
+
+        border-radius: 0.4em;
+
+    }
+
+    .imageCont {
+
+        position: relative;
+        width: em($imageSize,10);
+        @include imgRatio(80/54);
+
+        > img { display: block; width: 100%; }
+
+    }
+}

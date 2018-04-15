@@ -476,6 +476,7 @@ th {
   display: block;
   z-index: -1;
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
+  background-color: #FFF;
 }
 
 .slbImage {
@@ -1674,6 +1675,55 @@ body {
   .listModuleType2 {
     border-radius: 0.4em;
   }
+}
+
+.galleryModule {
+  background-color: #fff;
+  padding: 1em 2em;
+  border-bottom: 2px solid #EAEAEA;
+  position: relative;
+}
+
+.galleryModule > ul {
+  padding: 2em 0;
+  margin: 0 -0.5em;
+}
+
+.galleryModule > ul > li {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #EAEAEA;
+  float: left;
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin: 0;
+  border: 0;
+}
+
+@media screen and (min-width: 45.0625em) {
+  .galleryModule {
+    border-radius: 0.4em;
+  }
+}
+
+.galleryModule .imageCont {
+  position: relative;
+  width: 8em;
+  overflow: hidden;
+  padding-bottom: 67.5%;
+}
+
+.galleryModule .imageCont > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.galleryModule .imageCont > img {
+  display: block;
+  width: 100%;
 }
 
 .articleListType1 {
