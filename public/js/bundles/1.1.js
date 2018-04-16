@@ -24,12 +24,12 @@ webpackJsonp([1],{
 
 	        if ($('#' + id).length) {return;}
 
-	        $( '<link/>', {
-	            'rel': 'stylesheet',
-	            'type': 'text/css',
-	            'href': filename,
-	            'id': id
-	          })
+	        $('<link/>', {
+	            rel: 'stylesheet',
+	            type: 'text/css',
+	            href: filename,
+	            id: id
+	        })
 	            .appendTo('head');
 
 	    }
