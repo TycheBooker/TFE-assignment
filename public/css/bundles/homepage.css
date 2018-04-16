@@ -1356,16 +1356,15 @@ body {
 
 .galleryModule > ul {
   padding: 2em 0;
+  display: flex;
   margin: 0 -0.5em;
+  flex-wrap: wrap;
 }
 
 .galleryModule > ul > li {
-  margin-bottom: 1em;
   border-bottom: 1px solid #EAEAEA;
-  float: left;
   box-sizing: border-box;
   padding: 0.5em;
-  margin: 0;
   border: 0;
 }
 
