@@ -6,6 +6,9 @@ require('simple-lightbox');
 module.exports = View.extend({
 
     initialize: function(options) {
+
+        this.loadCss('css/bundles/simpleLightbox.css', 'simpleLightbox');
+
         $.ajax({
             url:'login-modal.html',
             success: function(data) {
@@ -15,6 +18,20 @@ module.exports = View.extend({
                 });
             }
         });
+
+    },
+
+    loadCss: function(filename, id) {
+
+        if ($('#' + id).length) {return;}
+
+        $( '<link/>', {
+            'rel': 'stylesheet',
+            'type': 'text/css',
+            'href': filename,
+            'id': id
+          })
+            .appendTo('head');
 
     }
 

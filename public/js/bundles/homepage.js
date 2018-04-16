@@ -130,7 +130,6 @@
 
 	        'input .mainSearch': function() {
 
-	            console.log('input');
 	            this.initMainSearch();
 
 	        },
@@ -152,16 +151,18 @@
 
 	    initMainSearch: function() {
 
-	        __webpack_require__.e/* nsure */(3, function() {
+	        __webpack_require__.e/* nsure */(1, function() {
+
 	            var MainSearch = __webpack_require__(7);
-	            this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
+	            new MainSearch({$el: $('.mainSearch')});
+
 	        });
 
 	    },
 
 	    showLoginModal: function(e) {
 
-	        __webpack_require__.e/* nsure */(4, function() {
+	        __webpack_require__.e/* nsure */(2, function() {
 
 	            var LoginModal = __webpack_require__(9);
 	            new LoginModal();
@@ -174,7 +175,7 @@
 
 	        var $gallery = $('.galleryModule .js-open-modal');
 
-	        __webpack_require__.e/* nsure */(5, function() {
+	        __webpack_require__.e/* nsure */(3, function() {
 
 	            var ImageModal = __webpack_require__(11);
 	            new ImageModal(e, $gallery);

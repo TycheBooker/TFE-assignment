@@ -22,7 +22,6 @@ module.exports = View.extend({
 
         'input .mainSearch': function() {
 
-            console.log('input');
             this.initMainSearch();
 
         },
@@ -45,8 +44,10 @@ module.exports = View.extend({
     initMainSearch: function() {
 
         require.ensure([], function() {
+
             var MainSearch = require('js/components/mainSearch');
-            this.mainSearch =  this.addView(new MainSearch({$el: $('.mainSearch')}));
+            new MainSearch({$el: $('.mainSearch')});
+
         });
 
     },

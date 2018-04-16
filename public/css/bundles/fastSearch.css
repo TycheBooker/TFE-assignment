@@ -1,0 +1,35 @@
+.fsResults, .fs_results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #FFF;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.fsrOpened .fsResults, .fsr_opened .fsResults, .fsrOpened .fs_results, .fsr_opened .fs_results {
+  -webkit-animation: slideDownFadeIn 0.2s;
+  -moz-animation: slideDownFadeIn 0.2s;
+  animation: slideDownFadeIn 0.2s;
+  display: block;
+}
+
+.fsResultItem, .fs_result_item {
+  display: block;
+  font-size: 1.6em;
+  padding: 0.9375em 1.25em;
+  color: #333;
+  border-top: 1px solid #EAEAEA;
+  cursor: pointer;
+}
+
+.fsResultItem:first-child, .fs_result_item:first-child {
+  border: 0;
+}
+
+.fsResultItem:hover, .fsResultItem.focused, .fs_result_item:hover, .fs_result_item.focused {
+  color: #E33044;
+  background-color: #F8F8F8;
+}
