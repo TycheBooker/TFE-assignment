@@ -1357,15 +1357,28 @@ body {
 .galleryModule > ul {
   padding: 2em 0;
   display: flex;
-  margin: 0 -0.5em;
+  margin: 0 -1em;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 45.0625em) {
+  .galleryModule > ul {
+    margin: 0 -0.5em;
+  }
 }
 
 .galleryModule > ul > li {
   border-bottom: 1px solid #EAEAEA;
   box-sizing: border-box;
-  padding: 0.5em;
+  padding: 1em;
   border: 0;
+}
+
+@media screen and (min-width: 45.0625em) {
+  .galleryModule > ul > li {
+    padding: 0.5em;
+  }
 }
 
 @media screen and (min-width: 45.0625em) {

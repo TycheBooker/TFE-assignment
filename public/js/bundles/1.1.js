@@ -1,12 +1,12 @@
 webpackJsonp([1],{
 
-/***/ 7:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(2);
 	var View = __webpack_require__(3);
 
-	__webpack_require__(8);
+	__webpack_require__(9);
 
 	module.exports = View.extend({
 
@@ -39,7 +39,7 @@ webpackJsonp([1],{
 
 /***/ }),
 
-/***/ 8:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(factory) {

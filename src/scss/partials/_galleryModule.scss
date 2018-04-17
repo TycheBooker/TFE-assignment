@@ -10,15 +10,28 @@
 
         padding: 2em 0;
         display: flex;
-        margin: 0 -0.5em;
+        margin: 0 -1em;
         flex-wrap: wrap;
+        justify-content: center;
+
+        @include mediaMinWidth($breakpointMedium) {
+
+            margin: 0 -0.5em;
+
+        }
 
         > li {
 
             border-bottom: 1px solid $colorGrayLight1;
             box-sizing: border-box;
-            padding: 0.5em;
+            padding: 1em;
             border: 0;
+
+            @include mediaMinWidth($breakpointMedium) {
+
+                padding: 0.5em;
+
+            }
 
         }
 

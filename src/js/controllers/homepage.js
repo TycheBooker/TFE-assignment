@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var View = require('jquery-simple-view');
 var MainNav = require('js/components/mainNav');
+var LazyLoad = require('js/components/lazyLoad');
 
 module.exports = View.extend({
 
@@ -36,6 +37,8 @@ module.exports = View.extend({
     setupBaseComponents: function() {
 
         this.mainNav = this.addView(new MainNav({$el: $('.mainNav')}));
+
+        this.lazyLoad = new LazyLoad();
 
         return this;
 
