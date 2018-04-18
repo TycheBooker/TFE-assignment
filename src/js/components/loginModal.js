@@ -23,7 +23,9 @@ module.exports = View.extend({
 
     loadCss: function(filename, id) {
 
-        if ($('#' + id).length) {return;}
+        if ($('#' + id).length) {
+            return;
+        }
 
         $('<link/>', {
             rel: 'stylesheet',
@@ -31,7 +33,7 @@ module.exports = View.extend({
             href: filename,
             id: id
         })
-            .appendTo('head');
+        .appendTo('head');
 
     }
 

@@ -123,5 +123,4 @@ class LazyLoad {
     }
 }
 
-
 module.exports = LazyLoad;
